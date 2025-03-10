@@ -1,24 +1,31 @@
+![ILoveSOL](https://github.com/user-attachments/assets/ef417050-39f5-412f-af3d-3752e4cfc1d3)
 ## 💸 ILoveSOL Telegram Bot
 
-# Solana Raydium New Liquidity Hunter 🤖
+# New Liquidity Hunter 🤖
+# Solana Raydium and Do rugcheck
 
 This Telegram bot is designed to hunt for Solana Raydium tokens and perform rug checks. It opens a websocket to monitor new liquidity pool creations. Once a new pool is detected, the bot pauses the websocket, processes the transaction to extract the mint token, performs a rug check, and then sends you a clear, comprehensive report right in your Telegram chat.
+
 # 🌟 Features
-- Real-Time Notifications: Monitors new liquidity pool events on the Solana blockchain via a websocket.
-- Token Analysis: Extracts the mint token from transactions and performs a rug check.
-- Detailed Reports: Sends concise, easy-to-read notifications directly to your Telegram chat.
+
+- **Real-Time Notifications**: Monitors new liquidity pool events on the Solana blockchain via a websocket.
+- **Token Analysis**: Extracts the mint token from transactions and performs a rug check.
+- **Detailed Reports**: Sends concise, easy-to-read notifications directly to your Telegram chat.
+
 # 🛠 Prerequisites
+
 Before getting started, ensure you have the following:
-- Helius API Key: Sign up and get your API key at Helius.
-- Telegram Bot Token: Create your bot using BotFather.
-- Telegram Chat ID: Retrieve your chat ID using this handy bot.
-- Python 3.8+
-- Git
 
-* For Android users:
-Download Termux from the Google Play Store to set up a terminal environment.
+- **Helius API Key**: Sign up and get your API key at Helius.
+- **Telegram Bot Token**: Create your bot using BotFather.
+- **Telegram Chat ID**: Retrieve your chat ID using this handy bot.
+- **Python 3.8+**
+- **Git**
 
-# 📁 This project consists of three main files:
+*For Android users:* Download Termux from the Google Play Store to set up a terminal environment.
+
+# 💁‍♂️ Project Structure:
+
 ```
 ILoveSOL/
 ├── ILove.py          # Main bot script
@@ -29,60 +36,103 @@ ILoveSOL/
 ```
 
 # 🚀 Installation
-* Android (Using Termux)
+
+### Android (Using Termux)
+
 ```bash
 pkg update && pkg upgrade
-```
-```bash
 pkg install python git nano
 ```
-**🔗    
+
+Clone the repository:
+
 ```bash
 git clone https://github.com/Ggyou96/ILoveSOL.git
-```
-```bash
 cd ILoveSOL
 ```
-Fill in your details for.env File 
-```bash
-TELEGRAM_BOT_TOKEN = "your-telegram-bot-token"
-ID_CHAT = "your-chat-id"
-api_helius_key = "your-helius-api-key"
-RAYDIUM_PROGRAM_ID = "675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8" 
-```
+
+Create a `.env` file and fill in your details:
+
 ```bash
 nano .env
 ```
+
+Example `.env` file content:
+
+```bash
+TELEGRAM_BOT_TOKEN="your-telegram-bot-token"
+ID_CHAT="your-chat-id"
+api_helius_key="your-helius-api-key"
+RAYDIUM_PROGRAM_ID="675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8" 
+```
+
 Create a Python Virtual Environment:
+
 ```bash
 python -m venv .venv
 ```
+
 Activate Virtual Environment:
-* MacOS/Linux/Androird:
+
+- MacOS/Linux/Android:
+
 ```bash
 source .venv/bin/activate
 ```
-* Windows:
+
+- Windows:
+
 ```bash
 .venv\Scripts\activate
-````
+```
+
 Upgrade pip and Install Dependencies:
+
 ```bash
 pip install --upgrade pip
-```
-```bash
 pip install -r requirements.txt
 ```
-# Running the Bot
-With your virtual environment activated, 
-simply run:
+
+# 🤖 Running the Bot
+
+With your virtual environment activated, simply run:
+
 ```bash
 python ILove.py
 ```
-Your bot will start send you notifications for new liquidity pool creations once it performs its checks.
-Feel free to contribute, open issues, or suggest improvements. Happy coding and enjoy your bot!
 
-## ALWAYS DO YOUR REASEARCH
+Your bot will start sending you notifications for new liquidity pool creations once it performs its checks.
 
+# ❗ Known Issues
 
+1. **Risky Tokens Not Being Filtered Properly**
+
+   - The `perform_rugcheck` function analyzes tokens but does not prevent notifications for high-risk ones.
+   - **Possible fix:** Implement a risk threshold to filter out high-risk tokens.
+
+2. **WebSocket Connection Drops**
+
+   - The WebSocket may fail to reconnect after multiple disconnections.
+   - **Possible fix:** Use exponential backoff for reconnection attempts.
+
+3. **Telegram Message Delivery Issues**
+
+   - The bot retries 3 times on failure but does not store failed messages for later retries.
+   - **Possible fix:** Implement logging and message queueing for failed attempts.
+
+4. **Transaction Fetching Errors**
+
+   - If the API request to fetch transaction details fails, it only prints an error.
+   - **Possible fix:** Add retry logic with increasing delay.
+
+5. **No Handling for API Rate Limits**
+
+   - The script does not detect or handle rate limits from Helius or Telegram APIs.
+   - **Possible fix:** Detect rate limit responses and apply exponential backoff.
+
+# 📜 License
+
+This project is licensed under the MIT License.
+
+## ⚠️ ALWAYS DO YOUR RESEARCH!
 
