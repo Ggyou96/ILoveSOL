@@ -1,6 +1,6 @@
 ILove.py - Solana Liquidity Pool Hunter Bot
 
-ILove.py is a powerful bot that monitors new liquidity pool creations on the Solana blockchain using a WebSocket connection. It extracts token mint addresses, performs a rug check using the rugcheck library, and sends a detailed risk report to a Telegram group.
+ILove.py is a powerful bot that monitors new liquidity pool creations on the Solana blockchain using a WebSocket connection. It extracts token mint addresses, performs a rug check using the rugcheck library, and sends a detailed risk report to a Telegram Chat.
 
 
 ---
