@@ -40,6 +40,8 @@ ILoveSOL/
 
 ```bash
 pkg update && pkg upgrade
+```
+```bash
 pkg install python git nano
 ```
 
