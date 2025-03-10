@@ -2,10 +2,10 @@
 
 # ILoveSOL Telegram Bot  🤖 
 ## 💸 New Liquidity Pool Hunter and Do rugcheck
-
 This Telegram bot is designed to hunt for Solana Raydium tokens and perform rug checks. It opens a websocket to monitor new liquidity pool creations. Once a new pool is detected, the bot pauses the websocket, processes the transaction to extract the mint token, performs a rug check, and then sends you a clear, comprehensive report right in your Telegram chat.
+## ⚠️ ALWAYS DO YOUR RESEARCH!
 
-# 🌟 Features
+🌟 Features
 
 - **Real-Time Notifications**: Monitors new liquidity pool events on the Solana blockchain via a websocket.
 - **Token Analysis**: Extracts the mint token from transactions and performs a rug check.
