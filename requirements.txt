@@ -1,0 +1,6 @@
+websocket-client
+websockets
+python-dotenv
+requests
+rugcheck
+httpx
