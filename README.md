@@ -2,26 +2,27 @@
 
 # ILoveSOL Telegram Bot  🤖 
 ## 💸 New Liquidity Pool Hunter and Do rugcheck
-This Telegram bot is designed to hunt for Solana Raydium tokens and perform rug checks. It opens a websocket to monitor new liquidity pool creations. Once a new pool is detected, the bot pauses the websocket, processes the transaction to extract the mint token, performs a rug check, and then sends you a clear, comprehensive report right in your Telegram chat.
+This Telegram bot is designed to monitor and analyze new tokens on Raydium, a decentralized exchange (DEX) built on the Solana blockchain. It opens a websocket connection to track the creation of new liquidity pools in real-time. Once a new pool is detected, the bot pauses the websocket, processes the transaction to extract Mint token, performs a [rugcheck](https://rugcheck.xyz/), and then sends you a clear, comprehensive report right in your Telegram chat.
 ## ⚠️ ALWAYS DO YOUR RESEARCH!
 
 🌟 Features
 
-- **Real-Time Notifications**: Monitors new liquidity pool events on the Solana blockchain via a websocket.
-- **Token Analysis**: Extracts the mint token from transactions and performs a rug check.
-- **Detailed Reports**: Sends concise, easy-to-read notifications directly to your Telegram chat.
+- **Real-Time Notifications**
+- **Token Analysis**
+- **Detailed Reports**
 
 # 🛠 Prerequisites
 
 Before getting started, ensure you have the following:
 
-- **Helius API Key**: Sign up and get your API key at Helius.
-- **Telegram Bot Token**: Create your bot using BotFather.
-- **Telegram Chat ID**: Retrieve your chat ID using this handy bot.
+- **Helius API Key**: Sign up and get your API key at [Helius](https://www.helius.dev/)
+- **Telegram Bot Token**: Create your bot using [BotFather](https://t.me/BotFather)
+- **Telegram Chat ID**: Retrieve your chat ID using this handy bot [userinfobot](https://t.me/userinfobot)
 - **Python 3.8+**
 - **Git**
 
-*For Android users:* Download Termux from the Google Play Store to set up a terminal environment.
+*For Android users:
+* [Download Termux](https://play.google.com/store/apps/details?id=com.termux&hl=en&pli=1) from Google Play Store to set up a terminal environment.
 
 # 💁‍♂️ Project Structure:
 
@@ -104,32 +105,31 @@ python ILove.py
 
 Your bot will start sending you notifications for new liquidity pool creations once it performs its checks.
 
+
+
+
+
 # ❗ Known Issues
 
 1. **Risky Tokens Not Being Filtered Properly**
 
    - The `perform_rugcheck` function analyzes tokens but does not prevent notifications for high-risk ones.
-   - **Possible fix:** Implement a risk threshold to filter out high-risk tokens.
 
 2. **WebSocket Connection Drops**
 
    - The WebSocket may fail to reconnect after multiple disconnections.
-   - **Possible fix:** Use exponential backoff for reconnection attempts.
-
+ 
 3. **Telegram Message Delivery Issues**
 
    - The bot retries 3 times on failure but does not store failed messages for later retries.
-   - **Possible fix:** Implement logging and message queueing for failed attempts.
 
 4. **Transaction Fetching Errors**
 
    - If the API request to fetch transaction details fails, it only prints an error.
-   - **Possible fix:** Add retry logic with increasing delay.
 
 5. **No Handling for API Rate Limits**
 
    - The script does not detect or handle rate limits from Helius or Telegram APIs.
-   - **Possible fix:** Detect rate limit responses and apply exponential backoff.
 
 # 📜 License
 
