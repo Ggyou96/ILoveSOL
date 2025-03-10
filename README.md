@@ -61,11 +61,11 @@ Create a .env file in the root directory and add your credentials:
 api_helius_key=your_helius_api_key_here
 
 # Raydium Program ID (Solana Liquidity Pool Program)
-RAYDIUM_PROGRAM_ID=your_raydium_program_id_here
+RAYDIUM_PROGRAM_ID = "675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8"
 
 # Telegram Bot Token & Chat ID
 TELEGRAM_SOGE_TOKEN=your_telegram_bot_token_here
-IDG_CHAT=your_telegram_chat_id_here
+ID_CHAT=your_telegram_chat_id_here
 
 ⚠️ Important: Never share your .env file. Add it to .gitignore to prevent accidental commits.
 
