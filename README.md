@@ -5,12 +5,12 @@
 <br>
 
 ****🔍 How It Works****<br>
-##### Start a websocket 
-##### 🎣 Target creation of new liquidity pools
-##### Extract Mint token information. then rugcheck
-##### 🔔 Sends a detailed risk report directly to Telegram chat.
-##### rugcheck thier legitimacy before making any moves. 🚀
-##### Designed to Hunt new tokens on Raydium, Decentralized Exchange On Solana 
+****Start a websocket****<br>
+****🎣 Target creation of new liquidity pools****<br>
+****Extract Mint token information. then [rugcheck](https://rugcheck.xyz)****<br>
+****🔔 Sends a detailed risk report directly to Telegram chat.****
+****rugcheck thier legitimacy before making any moves. 🚀****
+****Designed to Hunt new tokens on Raydium, Decentralized Exchange On Solana*****
 
 
     
