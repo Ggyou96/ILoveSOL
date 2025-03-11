@@ -1,12 +1,12 @@
 <div align="center">
-
-  # Telegram Bot  🤖 <br>
-## 💸 New Liquidity Pool Hunter<br>Rugcheck & Notifications
+  
+  *********Telegram Bot  🤖********* <br>
+  ******💸 New Liquidity Pool Hunter<br>Rugcheck & Notifications******
 <br>
 
 ****🔍 How It Works****<br>
 ****Start a websocket****<br>
-****🎣 Target creation of new liquidity pools****<br>
+****🎣 Target new liquidity pools creation****<br>
 ****Extract Mint token information. then [rugcheck](https://rugcheck.xyz)****<br>
 ****🔔 Sends a detailed risk report directly to Telegram chat.****
 ****rugcheck thier legitimacy before making any moves. 🚀****
@@ -14,15 +14,19 @@
 
 
     
-<img src="https://github.com/user-attachments/assets/ef417050-39f5-412f-af3d-3752e4cfc1d3" alt="ILoveSOL" width="50%">
+<img src="https://github.com/user-attachments/assets/ef417050-39f5-412f-af3d-3752e4cfc1d3" alt="ILoveSOL" width="100%">
 
 <br>
   
 </div>
+<br>
 
-# 🛠 Prerequisites
+******🛠 Prerequisites******
+<br><br>
+*****Before getting started, ensure you have the following:*****
 
-## Before getting started, ensure you have the following:<br><br>
+<br>
+
 - **Git**
 - **Python 3.8+**
 - **Helius API Key**: Sign up and get your API key at [Helius](https://www.helius.dev/)
@@ -33,36 +37,45 @@
 <div align="center"> 
   
 
-**🚀 Installation** <br>
+*****🚀 Installation*****<br>
 
-<img src="https://github.com/user-attachments/assets/2a83f91e-78c8-43a1-bfe5-13aa3a866c6e" alt="image" width="10%">
+<img src="https://github.com/user-attachments/assets/2a83f91e-78c8-43a1-bfe5-13aa3a866c6e" alt="image" width="30%">
 
-### Android users:
-[Download Termux](https://play.google.com/store/apps/details?id=com.termux&hl=en&pli=1) from Play Store to set up a terminal environment.
+*****Android users:*****
 
-##### Open Termex
 
+[Download Termux](https://play.google.com/store/apps/details?id=com.termux&hl=en&pli=1) from Play Store to set up a terminal environment.<br><br>
+***Open Termux***<br>
+**run**
+<br>
 ```bash
 pkg update && pkg upgrade
 ```
 ```bash
 pkg install python git nano
 ```
+<br>
 
-Clone the repository:
-
+***Clone the repository:***
+<br>
 ```bash
 git clone https://github.com/Ggyou96/ILoveSOL.git
 cd ILoveSOL
 ```
+<br>
 
-Create a `.env` file and fill in your details:
+**fill in .env with your details:**
+
+<br>
 
 ```bash
 nano .env
 ```
+<br>
 
-Example `.env` file content:
+**.env file content:**
+<br>
+
 
 ```bash
 TELEGRAM_BOT_TOKEN="your-telegram-bot-token"
@@ -70,32 +83,42 @@ ID_CHAT="your-chat-id"
 api_helius_key="your-helius-api-key"
 RAYDIUM_PROGRAM_ID="675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8" 
 ```
+<br>
 
 ***Create a Python Virtual Environment***
+<br>
 
 ```bash
 python -m venv .venv
 ```
+<br>
 
 *****Activate Virtual Environment*****
+<br>
 
-###### 💻 MacOS/Linux 📱Android
+****💻 MacOS/Linux 📱Android****
+<br>
 ```bash
 source .venv/bin/activate
 ```
-###### 🖥️ Microsofot Windows
+<br>
 
+***🖥️ Microsofot Windows***
+<br>
 ```bash
 .venv\Scripts\activate
 ```
-##### Upgrade pip and Install Dependencies:
+<br>
+
+***Upgrade pip and Install Dependencies:***<br>
 ```bash
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
+<br>
 
-# 🤖 Running the Bot
-
+***🤖 Running the Bot***
+<br>
 With your virtual environment activated, simply run:
 
 ```bash
@@ -103,8 +126,8 @@ python ILove.py
 ```
 
 Your bot will start sending you notifications for new liquidity pool creations once it performs its checks.
-<br>
-# ⚠️ ALWAYS DO YOUR RESEARCH!
+<br><br>
+⚠️ [ALWAYS DO YOUR RESEARCH!](https://rugcheck.xyz)
 <br> <br> </div>
   
 # 💁‍♂️ Project Structure:
