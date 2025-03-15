@@ -169,13 +169,8 @@ I am still new to GitHub collaboration, I appreciate any suggestions on improvin
 
 1. **Risky Tokens Not Being Filtered Properly**
    - The `perform_rugcheck` function analyzes tokens but does not prevent notifications for high-risk ones.
-2. **WebSocket Connection Drops**
-   - The WebSocket may fail to reconnect after multiple disconnections.
-3. **Telegram Message Delivery Issues**
-   - The bot retries 3 times on failure but does not store failed messages for later retries.
-4. **Transaction Fetching Errors**
-   - If the API request to fetch transaction details fails, it only prints an error.
-5. **No Handling for API Rate Limits**
+
+2. **No Handling for API Rate Limits**
    - The script does not detect or handle rate limits from Helius or Telegram APIs.
 
 #### 📜 License MIT License.
