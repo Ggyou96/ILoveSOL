@@ -143,7 +143,8 @@ def draw_menu(options, selected_index):
             print(' ' * menu_x_padding + f" > {option}")
         else:
             print(' ' * menu_x_padding + f"   {option}")
-    print("\n" + ' ' * menu_x_padding + "Use ↑/↓ to navigate | Enter to select | Hold Enter on 'Hunt' to stop")
+    print(' ' * menu_x_padding + " " + '-' * (menu_width - 4))
+    print("\n" + ' ' * menu_x_padding + "Enter to Select | Use ↑/↓ to Navigate")
 
 def main_menu(manager):
     menu_options = [
