@@ -15,11 +15,9 @@
 
     
 <img src="https://github.com/user-attachments/assets/ef417050-39f5-412f-af3d-3752e4cfc1d3" alt="ILoveSOL" width="100%">
-
 <br>
-  
+<br>
 </div>
-<br>
 
 ******🛠 Prerequisites******
 <br><br>
@@ -38,8 +36,13 @@
   
 
 *****🚀 Installation*****<br>
+<br>
+  
 
-<img src="https://github.com/user-attachments/assets/2a83f91e-78c8-43a1-bfe5-13aa3a866c6e" alt="image" width="30%">
+<img src="https://github.com/user-attachments/assets/f8fc5f1a-d8e8-43d0-afbb-27b89b35296b" width="360" height="auto" alt="Termux">
+<br>
+
+<img src="https://github.com/user-attachments/assets/2a83f91e-78c8-43a1-bfe5-13aa3a866c6e" alt="image" width="30%"> 
 
 *****Android users:*****
 
