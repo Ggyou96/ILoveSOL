@@ -71,6 +71,26 @@ def send_telegram_message(message, retries=3):
             time.sleep(2)
     return False
 
+def send_telegram_photo(photo_url, retries=3):
+    """Send a photo to the specified Telegram chat."""
+    logger.info(f"Preparing to send telegram photo: {photo_url}")
+    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendPhoto"
+    payload = {
+        "chat_id": TELEGRAM_CHAT_ID,
+        "photo": photo_url,
+        "parse_mode": "Markdown"
+    }
+    for attempt in range(retries):
+        try:
+            response = requests.post(url, json=payload, timeout=10)
+            response.raise_for_status()
+            logger.info("Telegram photo sent successfully.")
+            return True
+        except Exception as e:
+            logger.error(f"Telegram photo send error (attempt {attempt+1}): {e}")
+            time.sleep(2)
+    return False
+
 def fetch_transaction_details(signature):
     """Fetch transaction details from the Helius API."""
     logger.debug(f"Fetching transaction details for signature: {signature}")
@@ -116,7 +136,7 @@ def format_rugcheck_message(rc_result, token_mint):
     message += f"• *Creator:* `{rc_result['creator']}`\n"
     message += f"• *Mint Authority:* `{rc_result['mint_authority']}`\n"
     message += f"• *Freeze Authority:* `{rc_result['freeze_authority']}`\n\n"
-    message += f"• *Explore:* {solscan_link} | {dexscreen_link}\n\n"
+    message += f"• *Explore:*  {dexscreen_link}  | {solscan_link}\n\n"
     message += "*Top Holders (% Supply):*\n"
     message += "\n".join([f"`{p}%`" for p in rc_result['top_holders']]) + "\n\n"
     message += f"*Total Top 10:* `{rc_result['total_percentage']:.2f}%`\n\n"
@@ -211,7 +231,7 @@ def main():
                         
                         if tx_details := fetch_transaction_details(signature):
                             if token_mint := extract_token_address(tx_details):
-                                # NEW: Validate the token mint address before analysis
+                                # Validate the token mint address before analysis
                                 if not is_valid_solana_address(token_mint):
                                     logger.warning(f"Invalid Solana address detected: {token_mint}")
                                     print(f"⚠️ Invalid Solana address: {token_mint}")
@@ -221,6 +241,11 @@ def main():
                                 print(f"🔍 Analyzing token: {token_mint}")
                                 
                                 if rc_result := perform_rugcheck(token_mint):
+                                    # Send token image
+                                    image_url = f"https://dd.dexscreener.com/ds-data/tokens/solana/{token_mint}/header.png?key=931b70"
+                                    send_telegram_photo(image_url)
+                                    
+                                    # Send analysis results
                                     telegram_msg = format_rugcheck_message(rc_result, token_mint)
                                     if send_telegram_message(telegram_msg):
                                         logger.info("Notification sent successfully.")
