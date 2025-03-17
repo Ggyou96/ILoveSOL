@@ -131,10 +131,9 @@ def draw_menu(options, selected_index):
     print('\n' * y_padding)
     for line in lines:
         print(' ' * x_padding + line)
-    
-    print("\n" + ' ' * ((term_width - 20) // 2) + "="*20)
+    print("\n" + ' ' * ((term_width - 28) // 2))
     print(' ' * ((term_width - 28) // 2) + "Unstable SOL Trading Bot v1.0")
-    print(' ' * ((term_width - 20) // 2) + "="*20)
+    print("\n" + ' ' * ((term_width - 20) // 1))
     
     menu_width = max(len(option) for option in options) + 4
     menu_x_padding = max((term_width - menu_width) // 2, 0)
