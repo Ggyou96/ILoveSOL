@@ -104,19 +104,19 @@ def extract_token_address(transaction_data):
         return None
 
 def format_rugcheck_message(rc_result, token_mint):
-    # NEW: Added explorer links
     solscan_link = f"[Solscan](https://solscan.io/token/{token_mint})"
     dexscreen_link = f"[DexScreener](https://dexscreener.com/solana/{token_mint})"
     
-    # NEW: Risk assessment label
     risk_label = "🚨 HIGH RISK" if rc_result['score'] > 75 else "⚠️ MEDIUM RISK" if rc_result['score'] > 40 else "✅ LOW RISK"
     
     message = f"📊 *RugCheck Results*\n\n"
     message += f"• *Token Mint:* `{token_mint}`\n"
-    message += f"• *Risk Score:* {rc_result['score']} ({risk_label})\n"  # UPDATED: Included risk label
+    message += f"• *Risk Score:* {rc_result['score']} ({risk_label})\n"
     message += f"• *Liquidity:* {rc_result['liquidity']:.2f}\n"
-    message += f"• *Creator:* `{rc_result['creator']}`\n\n"
-    message += f"• *Explore:* {solscan_link} | {dexscreen_link}\n\n"  # UPDATED: Added explorer links
+    message += f"• *Creator:* `{rc_result['creator']}`\n"
+    message += f"• *Mint Authority:* `{rc_result['mint_authority']}`\n"
+    message += f"• *Freeze Authority:* `{rc_result['freeze_authority']}`\n\n"
+    message += f"• *Explore:* {solscan_link} | {dexscreen_link}\n\n"
     message += "*Top Holders (% Supply):*\n"
     message += "\n".join([f"`{p}%`" for p in rc_result['top_holders']]) + "\n\n"
     message += f"*Total Top 10:* `{rc_result['total_percentage']:.2f}%`\n\n"
@@ -145,6 +145,8 @@ def perform_rugcheck(token_mint):
             'score': rc.score,
             'liquidity': rc.totalMarketLiquidity,
             'creator': rc.creator if rc.creator else 'Unknown',
+            'mint_authority': rc.mintAuthority if hasattr(rc, 'mintAuthority') else 'None',
+            'freeze_authority': rc.freezeAuthority if hasattr(rc, 'freezeAuthority') else 'None',
             'top_holders': top_percentages,
             'total_percentage': total_percentage
         }
