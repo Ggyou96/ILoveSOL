@@ -120,10 +120,11 @@ pip install -r requirements.txt
 ***🤖 Running the Bot***
 <br>
 With your virtual environment activated, simply run:
-
+open menu
 ```bash
-python ILove.py
+python menu.py
 ```
+eap enter to start Hunt 
 
 Your bot will start sending you notifications for new liquidity pool creations once it performs its checks.
 <br><br>
