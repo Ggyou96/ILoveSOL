@@ -135,12 +135,16 @@ def draw_menu(options, selected_index):
     print("\n" + "="*20)
     print("Unstable SOL Trading Bot v1.0")
     print("="*20)
+    
+    menu_width = max(len(option) for option in options) + 4
+    menu_x_padding = max((term_width - menu_width) // 2, 0)
+    
     for i, option in enumerate(options):
         if i == selected_index:
-            print(f" > {option}")
+            print(' ' * menu_x_padding + f" > {option}")
         else:
-            print(f"   {option}")
-    print("\nUse ↑/↓ to navigate | Enter to select | Hold Enter on 'Hunt' to stop")
+            print(' ' * menu_x_padding + f"   {option}")
+    print("\n" + ' ' * menu_x_padding + "Use ↑/↓ to navigate | Enter to select | Hold Enter on 'Hunt' to stop")
 
 def main_menu(manager):
     menu_options = [
