@@ -61,14 +61,15 @@ def send_telegram_message(message, retries=3):
     }
     for attempt in range(retries):
         try:
-            response = requests.post(url, json=payload, timeout=10)
+            response = requests.post(url, json=payload, timeout=5)  # Reduced timeout from 10s to 5s
             response.raise_for_status()
             logger.info("Telegram message sent successfully.")
             return True
         except Exception as e:
             logger.error(f"Telegram send error (attempt {attempt+1}): {e}")
             print(f"Telegram send error (attempt {attempt+1}): {e}")
-            time.sleep(2)
+            if attempt < retries - 1:  # Only sleep if not the last attempt
+                time.sleep(2 ** attempt)  # Exponential backoff
     return False
 
 def send_telegram_photo(photo_url, retries=3):
@@ -82,13 +83,14 @@ def send_telegram_photo(photo_url, retries=3):
     }
     for attempt in range(retries):
         try:
-            response = requests.post(url, json=payload, timeout=10)
+            response = requests.post(url, json=payload, timeout=5)  # Reduced timeout
             response.raise_for_status()
             logger.info("Telegram photo sent successfully.")
             return True
         except Exception as e:
             logger.error(f"Telegram photo send error (attempt {attempt+1}): {e}")
-            time.sleep(2)
+            if attempt < retries - 1:
+                time.sleep(2 ** attempt)  # Exponential backoff
     return False
 
 def fetch_transaction_details(signature):
@@ -96,7 +98,7 @@ def fetch_transaction_details(signature):
     logger.debug(f"Fetching transaction details for signature: {signature}")
     payload = {"transactions": [signature]}
     try:
-        response = requests.post(HELIUS_HTTPS_URI_TX, json=payload, timeout=15)
+        response = requests.post(HELIUS_HTTPS_URI_TX, json=payload, timeout=8)  # Reduced timeout
         response.raise_for_status()
         data = response.json()
         logger.debug("Transaction details fetched successfully.")
