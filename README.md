@@ -1,183 +1,149 @@
 <div align="center">
-  
-  *********Telegram Bot  🤖********* <br>
-  ******💸 New Liquidity Pool Hunter<br>Rugcheck & Notifications******
-<br>
 
-****🔍 How It Works****<br>
-****Start a websocket****<br>
-****🎣 Target new liquidity pools creation****<br>
-****Extract Mint token information. then [rugcheck](https://rugcheck.xyz)****<br>
-****🔔 Sends a detailed risk report directly to Telegram chat.****
-****rugcheck thier legitimacy before making any moves. 🚀****
-****Designed to Hunt new tokens on Raydium, Decentralized Exchange On Solana*****
+# ILoveSOL - Unstable SOL Trading Bot
 
+### 🤖 Telegram Bot for New Liquidity Pool Hunting, Rugchecking & Notifications 💸
 
-    
-<img src="https://github.com/user-attachments/assets/ef417050-39f5-412f-af3d-3752e4cfc1d3" alt="ILoveSOL" width="100%">
-<br>
-<br>
 </div>
 
-******🛠 Prerequisites******
-<br><br>
-*****Before getting started, ensure you have the following:*****
+****🔍 How It Works****
 
-<br>
+This bot is designed to give you an edge in the fast-paced world of Solana trading. It works by:
+
+- **🚀 Starting a WebSocket connection** to the Helius API to monitor the Solana blockchain in real-time.
+- **🎣 Targeting the creation of new liquidity pools** on Raydium and Pump.fun.
+- **📈 Checking for the most active and latest boosted tokens** on DexScreener.
+- **🔎 Extracting the token mint address** and performing a comprehensive rug check using the [rugcheck.xyz](https://rugcheck.xyz) API.
+- **🔔 Sending a detailed risk report** directly to your Telegram chat, so you can assess the legitimacy of new tokens before making any moves.
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/ef417050-39f5-412f-af3d-3752e4cfc1d3" alt="ILoveSOL" width="100%">
+</div>
+
+---
+
+******🛠 Prerequisites******
+
+Before getting started, ensure you have the following:
 
 - **Git**
 - **Python 3.8+**
 - **Helius API Key**: Sign up and get your API key at [Helius](https://www.helius.dev/)
 - **Telegram Bot Token**: Create your bot using [BotFather](https://t.me/BotFather)
-- **Telegram Chat ID**: Retrieve your chat ID using this handy bot [userinfobot](https://t.me/userinfobot) <br> <br><br>
+- **Telegram Chat ID**: Retrieve your chat ID using this handy bot [userinfobot](https://t.me/userinfobot)
 
+---
 
-<div align="center"> 
-  
+<div align="center">
 
-*****🚀 Installation*****<br>
-<br>
-  
+*****🚀 Installation*****
 
 <img src="https://github.com/user-attachments/assets/f8fc5f1a-d8e8-43d0-afbb-27b89b35296b" width="360" height="auto" alt="Termux">
 <br>
+<img src="https://github.com/user-attachments/assets/2a83f91e-78c8-43a1-bfe5-13aa3a866c6e" alt="image" width="30%">
 
-<img src="https://github.com/user-attachments/assets/2a83f91e-78c8-43a1-bfe5-13aa3a866c6e" alt="image" width="30%"> 
+**📱 Android Users:**
 
-*****Android users:*****
+[Download Termux](https://play.google.com/store/apps/details?id=com.termux&hl=en&pli=1) from the Play Store to set up a terminal environment.
 
+**Open Termux and run:**
 
-[Download Termux](https://play.google.com/store/apps/details?id=com.termux&hl=en&pli=1) from Play Store to set up a terminal environment.<br><br>
-***Open Termux***<br>
-**run**
-<br>
 ```bash
 pkg update && pkg upgrade
-```
-```bash
 pkg install python git nano
 ```
-<br>
 
-***Clone the repository:***
-<br>
+**Clone the repository:**
+
 ```bash
 git clone https://github.com/Ggyou96/ILoveSOL.git
 cd ILoveSOL
 ```
-<br>
 
-**fill in .env with your details:**
+**Create your `.env` file:**
 
-<br>
+Copy the example environment file and then edit it with your details:
 
 ```bash
+cp envExample .env
 nano .env
 ```
-<br>
 
-**.env file content:**
-<br>
+Your `.env` file should look like this:
 
-
-```bash
+```
 TELEGRAM_BOT_TOKEN="your-telegram-bot-token"
 ID_CHAT="your-chat-id"
 api_helius_key="your-helius-api-key"
-RAYDIUM_PROGRAM_ID="675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8" 
 ```
-<br>
 
-***Create a Python Virtual Environment***
-<br>
+**Create and activate a Python Virtual Environment:**
 
 ```bash
 python -m venv .venv
-```
-<br>
-
-*****Activate Virtual Environment*****
-<br>
-
-****💻 MacOS/Linux 📱Android****
-<br>
-```bash
 source .venv/bin/activate
 ```
-<br>
+*(On Windows, use `.venv\Scripts\activate`)*
 
-***🖥️ Microsofot Windows***
-<br>
-```bash
-.venv\Scripts\activate
-```
-<br>
+**Install the dependencies:**
 
-***Upgrade pip and Install Dependencies:***<br>
 ```bash
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
-<br>
 
-***🤖 Running the Bot***
-<br>
-With your virtual environment activated, simply run:
-open menu
+</div>
+
+---
+
+**🤖 Running the Bot**
+
+With your virtual environment activated, start the interactive menu:
+
 ```bash
 python menu.py
 ```
-eap enter to start Hunt 
 
-Your bot will start sending you notifications for new liquidity pool creations once it performs its checks.
-<br><br>
-⚠️ [ALWAYS DO YOUR RESEARCH!](https://rugcheck.xyz)
-<br> <br> </div>
-  
+From the menu, you can:
+- **Start/Stop the Token Hunter**
+- **View live logs**
+- **Change settings** for sniping and rug checks
+- **Exit** the application
+
+⚠️ **ALWAYS DO YOUR OWN RESEARCH!** This tool is for educational purposes only and is not financial advice. ⚠️
+
+---
+
 # 💁‍♂️ Project Structure:
 
 ```
 ILoveSOL/
-├── ILove.py          # Main bot script
-├── requirements.txt  # Dependencies
-├── .env              # Details such as API keys and tokens (should not be shared!)
-├── README.md         # Project documentation
-└── LICENSE           # Legal information about usage
+├── ILove.py              # Core logic for WebSocket monitoring and token processing.
+├── menu.py               # Interactive menu to control the bot.
+├── ultimate_utils.py     # Utilities for fetching data from DexScreener.
+├── requirements.txt      # Project dependencies.
+├── settings_config.json  # Configuration file for snipe and rugcheck options.
+├── .env                  # Your secret keys and tokens.
+├── envExample            # An example of the .env file.
+├── hunter.log            # Log file for the Token Hunter.
+├── README.md             # Project documentation.
+└── LICENSE               # MIT License.
 ```
+
+---
 
 ### 💡 Contributing
-I welcome anyone who wants to collaborate on this project! Since this is my first project on GitHub, I am still learning how to manage contributions. If you'd like to work on this project, follow these steps:
-##### 📥 Get a Local Copy
-```bash
-git clone https://github.com/Ggyou96/ILoveSOL.git
-````
-###### Create a separate directory (optional)
-Instead of navigating into the project folder, you can copy it into a new directory:
-```bash
-mkdir X  # Replace 'X' with your preferred directory name
-cp -r ILoveSOL/* X/
-```
-Now, the project is available inside X/.
 
-🚀 How to Contribute
-Feel free to modify the code and improve it.
-If you make changes and want to share them, 
-you can:
-        Fork the repository.
-        Make your changes.
-        Submit a pull request (PR).
-<br>
-I am still new to GitHub collaboration, I appreciate any suggestions on improving the process. 😊
-        
+I welcome anyone who wants to collaborate on this project! Since this is my first project on GitHub, I am still learning how to manage contributions. If you'd like to work on this project, feel free to fork the repository, make your changes, and submit a pull request.
+
+---
+
 # ❗ Known Issues
 
-1. **Risky Tokens Not Being Filtered Properly**
-   - The `perform_rugcheck` function analyzes tokens but does not prevent notifications for high-risk ones.
+1.  **Risky Tokens Not Being Filtered Properly**: The `perform_rugcheck` function analyzes tokens but does not prevent notifications for high-risk ones.
+2.  **No Handling for API Rate Limits**: The script does not detect or handle rate limits from Helius or Telegram APIs.
 
-2. **No Handling for API Rate Limits**
-   - The script does not detect or handle rate limits from Helius or Telegram APIs.
+---
 
-#### 📜 License MIT License.
-
-
-
+#### 📜 License
+This project is licensed under the MIT License.
