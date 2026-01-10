@@ -1,0 +1,6 @@
+{
+  "name": "EVA Token",
+  "symbol": "EVA",
+  "description": "Controlled DEVNET test token minted by EVA to validate personal wallet integration, ownership isolation, and basic position lifecycle logic within multi-user trading simulations.",
+  "image": "https://raw.githubusercontent.com/Ggyou96/ILoveSOL/refs/heads/main/Eva_Token.png"
+}
