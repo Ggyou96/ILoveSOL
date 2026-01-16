@@ -1,7 +1,0 @@
-{
-  "name": "DECOY",
-  "symbol": "DECOY",
-  "description": "False-positive signal generator intended to mislead scanners and verify bot discrimination logic - DEVNET ONLY",
-  "image": "https://raw.githubusercontent.com/Ggyou96/ILoveSOL/refs/heads/main/Decoy_Token.png",
-  "mint": "3xfNUqyN4e5ND2UrC1W75Eu3Khgq2rK2hUX5VDUQXzBy"
-}

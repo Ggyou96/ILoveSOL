@@ -1,7 +1,0 @@
-{
-  "name": "BAIT",
-  "symbol": "BAIT",
-  "description": "Attraction-layer test token used to trigger buy logic and validate entry conditions under deceptive liquidity signals - DEVNET ONLY",
-  "image": "https://raw.githubusercontent.com/Ggyou96/ILoveSOL/refs/heads/main/Bait_Token.png",
-  "mint": "7Z3t1bRZwT4df7Ki2HsatU7VnwJFVjiBMBaVfhRDJTF4"
-}

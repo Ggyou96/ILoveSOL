@@ -1,7 +1,0 @@
-{
-  "name": "NULL",
-  "symbol": "NULL",
-  "description": "Minimal-value token used to validate zero-impact trades, dust handling, and no-op execution paths - DEVNET ONLY",
-  "image": "https://raw.githubusercontent.com/Ggyou96/ILoveSOL/refs/heads/main/Null_Token.png",
-  "mint": "4dQqkkyFxiprvwpRpNFxfAjE2vAT82VqEGn8FJYc8TnK"
-}

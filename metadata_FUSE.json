@@ -1,7 +1,0 @@
-{
-  "name": "FUSE",
-  "symbol": "FUSE",
-  "description": "Timed-failure test token designed to behave normally until a delayed sell attempt is triggered - DEVNET ONLY",
-  "image": "https://raw.githubusercontent.com/Ggyou96/ILoveSOL/refs/heads/main/Fuse_Token.png",
-  "mint": "FXjzYrqTkjS2Z44MQHDSg1pZ77P684abC1JTnkKHBcnH"
-}
