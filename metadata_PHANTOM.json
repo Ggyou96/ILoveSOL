@@ -1,0 +1,7 @@
+{
+  "name": "PHANTOM",
+  "symbol": "PHANTOM",
+  "description": "Ghost-position simulator used to ensure positions are not created without confirmed settlement - DEVNET ONLY",
+  "image": "https://raw.githubusercontent.com/Ggyou96/ILoveSOL/refs/heads/main/Phantom_Token.png",
+  "mint": "6q2joaqdzFRPAsd8VfiV2gCVPBFR4143GMpVokmNyinM"
+}

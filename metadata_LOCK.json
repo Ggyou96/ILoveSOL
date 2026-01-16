@@ -1,0 +1,7 @@
+{
+  "name": "LOCK",
+  "symbol": "LOCK",
+  "description": "Liquidity-lock scenario token used to verify bot behavior when exits are technically possible but practically constrained - DEVNET ONLY",
+  "image": "https://raw.githubusercontent.com/Ggyou96/ILoveSOL/refs/heads/main/Lock_Token.png",
+  "mint": "4UoSDTxxrBv1UsT77nvxQxTnreK3dxQAJimdk9z2T8vs"
+}

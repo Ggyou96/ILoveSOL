@@ -1,0 +1,7 @@
+{
+  "name": "GLITCH",
+  "symbol": "GLITCH",
+  "description": "Edge-case execution token for testing quote mismatches, rounding errors, and unexpected state transitions - DEVNET ONLY",
+  "image": "https://raw.githubusercontent.com/Ggyou96/ILoveSOL/refs/heads/main/Glitch_Token.png",
+  "mint": "A85jES7CgSCR588CDsGfxE3ueBxGisAdCyvoDaCS2WS8"
+}

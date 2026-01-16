@@ -1,0 +1,7 @@
+{
+  "name": "SNARE",
+  "symbol": "SNARE",
+  "description": "Sell-path stress test token designed to partially execute exits and expose timing or confirmation race conditions - DEVNET ONLY",
+  "image": "https://raw.githubusercontent.com/Ggyou96/ILoveSOL/refs/heads/main/Snare_Token.png",
+  "mint": "FiAztX1rJ33QGPrGwCH9mXxfKC15rjdhH8ohGfa69khK"
+}
